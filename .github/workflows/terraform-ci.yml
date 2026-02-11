@@ -7,7 +7,7 @@ on:
 
 jobs:
   terraform:
-    name: Terraform fmt and validate check
+    name: Terraform  CI Validation
     runs-on: ubuntu-latest
 
     steps:

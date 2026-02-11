@@ -1,4 +1,4 @@
-name: IaC Check - Terraform fmt and validate
+name: IaC Check - Terraform format and validate
 
 on:
   push:
@@ -17,11 +17,11 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
-      - name: Terraform fmt
+      - name: Terraform Format Check
         run: terraform fmt -recursive
        
       - name: Terraform init
         run: terraform init -backend=false -input=false
 
       - name: Terraform validate
-        run: terraform validate -no-color
+        run: terraform validate
